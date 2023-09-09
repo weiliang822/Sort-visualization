@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHistory,createWebHashHistory } from "vue-router"
 const routes = [
     {
         path: '/',
@@ -7,9 +7,12 @@ const routes = [
     }
 ]
 const router = createRouter({
-    history: createWebHistory(),
+    //history: createWebHistory(),
+    //history: process.env.IS_ELECTRON ? createWebHashHistory() : createWebHistory(),
+    history: createWebHashHistory(),
     routes
 })
+
 
 export default router
 

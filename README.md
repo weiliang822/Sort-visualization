@@ -2,7 +2,11 @@
 
 ```
 cd sort-visualization
-yarn install
+安装依赖
+yarn install  
+启动项目
 yarn dev
+打包
+yarn electron:build
 ```
 

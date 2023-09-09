@@ -1,0 +1,39 @@
+{
+    "productName": "sort-visualization",
+    "appId": "sort-visualization",
+    "copyright": "Copyright © 2023-present weiliang",
+    "compression": "maximum",
+    "asar": true,
+    "directories": {
+        "output": "release/${version}"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "perMachine": true,
+        "deleteAppDataOnUninstall": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "sort-visualization"
+    },
+    "win": {
+        "icon": "./resource/shortcut.ico",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}",
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "ia32"
+                ]
+            }
+        ]
+    },
+    "mac": {
+        "icon": "./resource/shortcut.icns",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}"
+    },
+    "linux": {
+        "icon": "./resource",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}"
+    }
+}

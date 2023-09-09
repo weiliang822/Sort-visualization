@@ -1,8 +1,15 @@
-<script setup>
+<script>
+import userpage from './view/userpage.vue'
+
+export default {
+  components: {
+    userpage
+  }
+}
 </script>
 
 <template>
-  <router-view />
+  <userpage />
 </template>
 
 <style scoped>
